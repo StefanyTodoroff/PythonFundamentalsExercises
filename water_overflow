@@ -1,0 +1,15 @@
+capacity = 255
+overall_litres = 0
+
+n = int(input())
+
+for _ in range(n):
+    litres = int(input())
+    if capacity < litres:
+        print('Insufficient capacity!')
+        continue
+    else:
+        overall_litres += litres
+        capacity -= litres
+
+print(overall_litres)
