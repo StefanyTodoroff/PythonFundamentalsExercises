@@ -1,0 +1,18 @@
+n = int(input())
+value = 0
+weight_winner = 0
+time_winner = 0
+quality_winner = 0
+
+for _ in range(n):
+    weight = int(input())
+    time_needed = int(input())
+    quality = int(input())
+    current_value = (weight / time_needed) ** quality
+    if current_value > value:
+        value = current_value
+        weight_winner = weight
+        time_winner = time_needed
+        quality_winner = quality
+value = int(value)
+print(f'{weight_winner} : {time_winner} = {value} ({quality_winner})')
